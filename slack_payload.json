@@ -1,0 +1,42 @@
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "🧹 HygieneBot: Action Required"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*Found Zombies:*\n• 15 Unattached EBS Volumes\n• 2 Idle EC2 Instances (0% CPU)\n• 10045 Old Snapshots (> 90 days)\n• 8 Untagged Resources\n\nBatch ID: `5c9d1c12-3b21-4f4a-8f5b-1b919a3b2b41`"
+      }
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Approve Cleanup"
+          },
+          "style": "danger",
+          "value": "{\"batch_id\": \"5c9d1c12-3b21-4f4a-8f5b-1b919a3b2b41\", \"action\": \"approve\"}",
+          "action_id": "approve_cleanup"
+        },
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Deny"
+          },
+          "value": "{\"batch_id\": \"5c9d1c12-3b21-4f4a-8f5b-1b919a3b2b41\", \"action\": \"deny\"}",
+          "action_id": "deny_cleanup"
+        }
+      ]
+    }
+  ]
+}
